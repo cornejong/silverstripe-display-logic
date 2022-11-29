@@ -167,7 +167,7 @@ class Criteria
 
     public function isIn(array $haystack)
     {
-        $this->addCriterion(Criterion::create($this->master, "In", json_encode(array_values($haystack)), $this));
+        $this->addCriterion(Criterion::create($this->master, "AnyOf", json_encode(array_values($haystack)), $this));
         return $this;
     }
 

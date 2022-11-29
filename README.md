@@ -8,6 +8,8 @@ The Display Logic module allows you to add conditions for displaying or hiding c
 <?php
 $products->displayIf("HasProducts")->isChecked();
 
+$products->displayIf("Products")->isAnyOf(['product1', 'product2', 'product3']);
+
 $sizes->hideUnless("ProductType")->isEqualTo("t-shirt")
       ->andIf("Price")->isGreaterThan(10);
       
@@ -37,6 +39,7 @@ $shipping->displayIf("ProductType")->isEqualTo("furniture")
     - hasCheckedOption
     - hasCheckedAtLeast
     - hasCheckedLessThan
+    - IsIn
     
 ## Available display conditions
     - displayIf()
