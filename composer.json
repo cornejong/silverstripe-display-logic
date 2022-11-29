@@ -1,5 +1,5 @@
 {
-    "name": "unclecheese/display-logic",
+    "name": "blackdoor/silverstripe-display-logic",
     "replace": {
         "silverstripe/display-logic": "*"
     },

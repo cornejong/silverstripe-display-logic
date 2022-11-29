@@ -165,6 +165,12 @@ class Criteria
         return $this;
     }
 
+    public function isIn(array $haystack)
+    {
+        $this->addCriterion(Criterion::create($this->master, "In", json_encode(array_values($haystack)), $this));
+        return $this;
+    }
+
     /**
      * Adds a new criterion
      * @param Criterion|Criteria $c

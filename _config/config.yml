@@ -15,6 +15,7 @@ UncleCheese\DisplayLogic\Criteria:
     - hasCheckedOption
     - hasCheckedAtLeast
     - hasCheckedLessThan
+    - isIn
   animations:
     - toggle
     - slide

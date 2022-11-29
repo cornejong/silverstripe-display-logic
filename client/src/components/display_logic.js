@@ -110,6 +110,18 @@ jQuery.entwine('ss', ($) => {
       return this.getFieldValue() === val;
     },
 
+    evaluateIn(val) {
+      let list = [];
+      try {
+        list = JSON.parse(val);
+      } catch (error) {
+        console.error(error)
+        return false;
+      }
+
+      return list.includes(this.getFieldValue());
+    },
+
     evaluateNotEqualTo(val) {
       return this.getFieldValue() !== val;
     },
